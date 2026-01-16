@@ -1,0 +1,30 @@
+.contact-item {
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+}
+
+.contact-item .icon {
+    height: 1rem;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+/* CV */
+.cv-wrapper {
+    display: table;
+    width: 100%;
+}
+
+.cv-left {
+    display: table-cell;
+    width: 75%;
+    vertical-align: top;
+    padding-right: 1rem;
+}
+
+.cv-right {
+    display: table-cell;
+    width: 25%;
+    vertical-align: top;
+    padding-left: 1rem;
+}
