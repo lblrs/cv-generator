@@ -1,23 +1,32 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <link href="/assets/css/cv.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CV Maker</title>
 </head>
 
-<body>
 
-    <main class="bg-dark vh-100 m-auto">
+<body class="p-4 bg-dark vh-100 ">
 
-        <h1>Hello, make your CV</h1>
-        <button onclick="location.href=`includes/home.php`">Make CV</button>
+    <main class="row rounded-5 h-100 d-felx justify-content-around gap-3">
+
+        <div class="col-12 col-md-3 order-1 bg-light rounded-5 p-5 h-100">
+            <?php include "includes/form.php" ?>
+        </div>
+
+        <div class="col-12 col-md-7 order-2  bg-light rounded-5 overflow-y-auto h-100 p-5">
+            <?php include "includes/cv.php" ?>
+        </div>
+
     </main>
 
+
+    <script src="/assets/js/app.js"></script>
 </body>
 
-</html>b
+</html>
