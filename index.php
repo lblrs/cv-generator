@@ -15,18 +15,18 @@
 
     <main class="row rounded-5 h-100 d-felx justify-content-around gap-3">
 
-        <div class="col-12 col-md-3 order-1 bg-light rounded-5 p-5 h-100">
+        <div class="col-12 col-md-5 order-1 bg-light rounded-5 p-5 h-100">
             <?php include "includes/form.php" ?>
         </div>
-
-        <div class="col-12 col-md-7 order-2  bg-light rounded-5 overflow-y-auto h-100 p-5">
+        
+        <div class="col-12 col-md-6  order-2  bg-light rounded-5 overflow-y-auto h-100 p-5">
             <?php include "includes/cv.php" ?>
         </div>
 
     </main>
 
 
-    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/cv.js"></script>
 </body>
 
 </html>

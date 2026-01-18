@@ -35,7 +35,7 @@
 
                     <div class="contact-item">
                         <img src="/assets/img/address.png" class="icon">
-                        <span id="cv-address">Adresse</span>
+                        <span id="cv-city">Adresse</span>
                     </div>
                 </td>
 
@@ -45,84 +45,44 @@
     </div>
     <hr>
 
+    <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+            <td width="70%" valign="top">
 
-    <div class="cv-wrapper">
-
-        <div class="cv-left">
-
-            <!-- EXP -->
-            <div id="expCv" class="vh-50 mb-5">
-                <h2 class="border-bottom border-primary pb-1 mt-3">
-                    Expérience professionnelle
-                </h2>
-
-                `<div class="mb-3">
-                    <div class="d-flex">
-                        <h3 id="cv-jobTitle" class="h6 fw-bold mb-1">Poste</h3>
-                        <h3 class="h6 fw-bold mb-1">&nbsp;/&nbsp;</h3>
-                        <h3 id="cv-company" class="h6 fw-bold mb-1">Entreprise</h3>
-                    </div>
-                    <div class="d-flex">
-                        <p id="cv-startDate" class="text-muted small mb-1">Date de début</p>
-                        <p class="text-muted small mb1">&nbsp;/&nbsp;</p>
-                        <p id="cv-endDate" class="text-muted small mb-1">Date de fin</p>
-                    </div>
-                    <p id="cv-jobDescription">Description de l’expérience professionnelle.</p>
-                </div>`
-            </div>
-            <hr>
-
-
-            <!-- EDUCATION -->
-            <div>
-                <h2 class="border-bottom border-primary pb-1 mt-4">Éducation</h2>
-
-                <div id="schoolCv" class="mb-3">
-                    <div class="d-flex">
-                        <h3 id="cv-diplome" class="h6 fw-bold mb-1">Diplôme</h3>
-                        <h3 class="h6 fw-bold mb-1">&nbsp;/&nbsp;</h3>
-                        <h3 id="cv-school" class="h6 fw-bold mb-1">Etablissement</h3>
-                    </div>
-                    <div class="d-flex">
-                        <p id="cv-schoolStartDate" class="text-muted small mb-1">Date de début</p>
-                        <p class="text-muted small mb1">&nbsp;/&nbsp;</p>
-                        <p id="cv-schoolEndDate" class="text-muted small mb-1">Date de fin</p>
-                    </div>
-                    <p id="cv-schoolDescription">Description de la formation.</p>
+                <!-- EXP -->
+                <div id="expCv" class="mb-5">
+                    <h2 class="border-bottom border-primary pb-1 mt-3">
+                        Expérience professionnelle
+                    </h2>
                 </div>
-            </div>
+                <hr>
 
-        </div>
+                <!-- EDUCATION -->
+                <div>
+                    <h2 class="border-bottom border-primary pb-1 mt-4">Éducation</h2>
+                    <div id="schoolCv" class="mb-3">
+                    </div>
+                </div>
 
+            </td>
+            <td width="30%" valign="top" style="padding-left: 20px;">
 
+                <!-- SKILLS -->
+                <h5 class="border-bottom border-primary pb-1 mt-4">Compétences</h5>
+                <ul id="cv-skill" class="small ps-3">
+                </ul>
 
-        <div class="cv-right">
+                <!-- LANGUES -->
+                <h5 class="border-bottom border-primary pb-1 mt-4">Langues</h5>
+                <ul class="small ps-3">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Bootstrap</li>
+                    <li>PHP</li>
+                </ul>
 
+            </td>
+        </tr>
+    </table>
 
-            <!-- SKILLS -->
-            <h5 class="border-bottom border-primary pb-1 mt-4">Compétences</h5>
-            <ul class="small ps-3">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Bootstrap</li>
-                <li>PHP</li>
-            </ul>
-
-
-            <!-- LANGUES -->
-            <h5 class="border-bottom border-primary pb-1 mt-4">Langues</h5>
-            <ul class="small ps-3">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Bootstrap</li>
-                <li>PHP</li>
-            </ul>
-
-
-
-        </div>
-
-    </div>
-
-</div>
 </div>
