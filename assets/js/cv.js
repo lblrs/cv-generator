@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
         expId++;
         if (expId > 6) return;
 
-        const expHTML = `
-            <div class="col-md-6">
+        const expHTML =
+            `<div class="col-md-6">
                 <label for="jobTitle${expId}" class="form-label">Poste</label>
                 <input type="text" 
                     class="form-control" 
@@ -67,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <hr class="mt-3">
         `;
 
-        const expCVHTML = `
-            <div class="mb-3">
+        const expCVHTML =
+            `<div class="mb-3">
                 <div class="d-flex">
                     <h3 id="cv-jobTitle${expId}" class="h6 fw-bold mb-1">---</h3>
                     <h3 class="h6 fw-bold mb-1">&nbsp;/&nbsp;</h3>
@@ -102,8 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
         schoolId++;
         if (schoolId > 5) return;
 
-        const schoolHTML = `
-            <div class="col-md-6">
+        const schoolHTML =
+            `<div class="col-md-6">
                 <label for="diplome${schoolId}" class="form-label">Diplôme</label>
                 <input type="text" 
                     class="form-control" 
@@ -146,8 +146,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <hr class="mt-3">
         `;
 
-        const schoolCvHTML = `
-            <div class="mb-3">
+        const schoolCvHTML = 
+            `<div class="mb-3">
                 <div class="d-flex">
                     <h3 id="cv-diplome${schoolId}" class="h6 fw-bold mb-1">---</h3>
                     <h3 class="h6 fw-bold mb-1">&nbsp;/&nbsp;</h3>
@@ -178,16 +178,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const skillsBtn = document.getElementById("skillsBtn");
     let skillsId = 0;
 
-    skillsBtn.addEventListener("click", function() {
+    skillsBtn.addEventListener("click", function () {
         skillsId++;
 
-        skillsHTML = 
-                    `<div id="skillsForm" class="col-md-12">
+        skillsHTML =
+            `<div id="skillsForm" class="col-md-12">
                     <label for="skill" class="form-label">Compétence</label>
                     <textarea class="form-control" id="skill" data-target="#cv-skill${skillsId}"></textarea>
                     <button id="skillsDelBtn${skillsId}" type="button" class="btn btn-outline-danger col-md-6 m-auto mt-3">Supprimer</button>
 
-                    </div>`
+                    </div>`;
 
 
         skillsCvHTML = `<li>---</li>`;
