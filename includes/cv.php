@@ -74,11 +74,8 @@
 
                 <!-- LANGUES -->
                 <h5 class="border-bottom border-primary pb-1 mt-4">Langues</h5>
-                <ul class="small ps-3">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Bootstrap</li>
-                    <li>PHP</li>
+                <ul id="cv-lng" class="small ps-3">
+                    
                 </ul>
 
             </td>

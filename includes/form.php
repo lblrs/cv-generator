@@ -65,7 +65,7 @@
 
     <!-- SKILLS -->
 
-        <div class="row">
+    <div class="row">
         <div class="d-flex gap-3 pt-5">
             <img src="/assets/img/skills.png">
             <h3 class="text-center">Compétences</h3>
@@ -77,9 +77,24 @@
     <button type="button" id="skillsBtn" class="btn btn-primary btn-lg col-6 m-2 mt-3">Ajouter</button>
 
 
-    <hr>
-    <div class="col-12">
-        <button type="submit" class="btn btn-primary">Valider</button>
+    <!-- LNG -->
+
+    <div class="row">
+        <div class="d-flex gap-3 pt-5">
+            <img src="/assets/img/lng2.png" class="pb-1">
+            <h3 class="text-center">Langues</h3>
+        </div>
+        <hr>
+
+        <div id="lngForm" class="col-md-12"></div>
+
     </div>
-    
+    <button type="button" id="lngBtn" class="btn btn-primary btn-lg col-6 m-2 mt-3">Ajouter</button>
+
+
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary m-auto mt-5">Valider</button>
+    </div>
+
 </form>
