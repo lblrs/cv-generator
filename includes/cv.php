@@ -19,22 +19,18 @@
                 <!-- CONTACT -->
                 <td width="25%" valign="top">
                     <div class="contact-item">
-                        <img src="/assets/img/email.png" class="icon">
                         <span id="cv-email">Email</span>
                     </div>
 
                     <div class="contact-item">
-                        <img src="/assets/img/tel.png" class="icon">
                         <span id="cv-tel">Tel</span>
                     </div>
 
                     <div class="contact-item">
-                        <img src="/assets/img/birthday.png" class="icon">
                         <span id="cv-birth">Date de naissance</span>
                     </div>
 
                     <div class="contact-item">
-                        <img src="/assets/img/address.png" class="icon">
                         <span id="cv-city">Adresse</span>
                     </div>
                 </td>
@@ -69,7 +65,7 @@
 
                 <!-- SKILLS -->
                 <h5 class="border-bottom border-primary pb-1 mt-4">Compétences</h5>
-                <ul id="cv-skill" class="small ps-3">
+                <ul id="skillsCv" class="small ps-3">
                 </ul>
 
                 <!-- LANGUES -->

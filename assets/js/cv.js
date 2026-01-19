@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", function (e) {
         if (e.target.classList.contains("delete-btn")) {
             const id = e.target.getAttribute("data-id");
-            
+
             const formElement = document.getElementById(id + "-form");
             const cvElement = document.getElementById(id + "-cv");
-            
+
             if (formElement) formElement.remove();
             if (cvElement) cvElement.remove();
         }
@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //SKILLS
     const skillsForm = document.getElementById("skillsForm");
-    const skillsCv = document.getElementById("cv-skill");
+    const skillsCv = document.getElementById("skillsCv");
     const skillsBtn = document.getElementById("skillsBtn");
     let skillsId = 0;
 
@@ -203,15 +203,15 @@ document.addEventListener("DOMContentLoaded", function () {
         skillsId++;
 
         const skillsHTML = `
-            <div id="skills${skillsId}-form" class="col-md-12">
-                <label for="skill${skillsId}" class="form-label">Compétence</label>
-                <input class="form-control" id="skill${skillsId}" data-target="#cv-skill${skillsId}">
-                <button type="button" class="btn btn-outline-danger col-md-6 mt-2 mb-2 delete-btn" data-id="skills${skillsId}">Supprimer</button>
-                <hr>
-            </div>
-        `;
+        <div id="skills${skillsId}-form" class="col-md-12">
+            <label for="skills${skillsId}" class="form-label">Compétence</label>
+            <input class="form-control" id="skills${skillsId}" data-target="#cv-skills${skillsId}">
+            <button type="button" class="btn btn-outline-danger col-md-6 mt-2 mb-2 delete-btn" data-id="skills${skillsId}">Supprimer</button>
+            <hr>
+        </div>
+    `;
 
-        const skillsCvHTML = `<li id="skills${skillsId}-cv" id="cv-skill${skillsId}">---</li>`;
+        const skillsCvHTML = `<li id="skills${skillsId}-cv">---</li>`;
 
         skillsForm.insertAdjacentHTML("beforeend", skillsHTML);
         skillsCv.insertAdjacentHTML("beforeend", skillsCvHTML);
@@ -426,4 +426,10 @@ document.addEventListener("DOMContentLoaded", function () {
         lngCv.insertAdjacentHTML("beforeend", lngCvHTML);
     });
 
+
+
+    //EXPORT
+    document.getElementById("exportBtn").addEventListener("click", function () {
+        window.location.href = "export.php";
+    });
 });

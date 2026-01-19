@@ -94,7 +94,7 @@
 
 
     <div class="col-12">
-        <button type="submit" class="btn btn-primary m-auto mt-5">Valider</button>
+        <button id="exportBtn" type="submit" class="btn btn-primary m-auto mt-5">Valider</button>
     </div>
 
 </form>
