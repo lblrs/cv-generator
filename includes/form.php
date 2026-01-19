@@ -6,7 +6,7 @@
         <h3> Informations</h3>
     </div>
 
-    <hr class="bg-secondary">
+    <hr>
 
     <div class="col-md-6">
         <label for="name" class="form-label">Nom et Prénom *</label>
@@ -100,9 +100,9 @@
 
 
         
-        <div class="col-12">
-        <button id="resetBtn" type="submit" class="btn btn-warning mt-5 ">Reset</button>
-        <button id="exportBtn" type="submit" class="btn btn-success col-12 m-auto mt-2">Télécahrger PDF</button>
+        <div class="col-12 mt-5">
+            <button id="exportBtn" type="submit" class="btn btn-success col-md-8">Télécahrger PDF</button>
+            <button id="resetBtn" type="submit" class="btn btn-outline-success">Reset</button>
     </div>
 
 </form>

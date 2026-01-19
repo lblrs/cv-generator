@@ -187,14 +187,15 @@ document.addEventListener("DOMContentLoaded", function () {
             <option value="Expert">Expert</option>
             </select>
             
-            <button type="button" class="btn btn-outline-danger col-md-6 mt-2 mb-2 delete-btn" data-id="skills${skillsId}">Supprimer</button>
+            <button type="button" class="btn btn-outline-danger col-md-6 mt-2 mb-2 d-block delete-btn" data-id="skills${skillsId}">Supprimer</button>
             <hr>
         </div>
     `;
 
         const skillsCvHTML =
-            `<span id="cv-skills${skillsId}">---</span> - <span id="cv-skills-lvl${skillsId}">---</span>`
-            ;
+        `<li id="skills${skillsId}-cv">
+        <span id="cv-skills${skillsId}">---</span> - <span id="cv-skills-lvl${skillsId}">---</span>
+        </li>`;
 
         skillsForm.insertAdjacentHTML("beforeend", skillsHTML);
         skillsCv.insertAdjacentHTML("beforeend", skillsCvHTML);

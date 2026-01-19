@@ -6,8 +6,8 @@
 
                 <!-- ABOUT -->
                 <td width="75%" style="text-align: center;">
-                    <img id="cv-avatar" class="" src="/assets/img/avatar.jpg" alt="Profile photo" style="width: 5rem; height: 5rem; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 0.5rem auto;">
-                    <div class="text-center">
+                    <div class="">
+                        <img id="cv-avatar" class="" src="/assets/img/avatar.jpg" alt="Profile photo" style="width: 5rem; height: 5rem; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 0.5rem auto;">
                         <h1 id="cv-name" style="margin: 0; font-weight: bold;">Prénom&nbsp;Nom</h1>
                     </div>
 
@@ -69,13 +69,12 @@
 
                 <!-- SKILLS -->
                 <h5 class="border-bottom border-primary pb-1 mt-4">Compétences</h5>
-                <ul id="skillsCv" class="small ps-3">
-                </ul>
+                <ul id="skillsCv" class="small ps-3"></ul>
 
                 <!-- LANGUES -->
                 <h5 class="border-bottom border-primary pb-1 mt-4">Langues</h5>
                 <ul id="cv-lng" class="small ps-3">
-                    
+
                 </ul>
 
             </td>
