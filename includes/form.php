@@ -10,37 +10,37 @@
 
     <div class="col-md-6">
         <label for="name" class="form-label">Nom et Prénom *</label>
-        <input type="text" class="form-control" id="name" data-target="#cv-name" required>
+        <input type="text" class="form-control bg-dark text-white" id="name" data-target="#cv-name" required>
     </div>
 
     <div class="col-md-6">
         <label for="email" class="form-label">Email *</label>
-        <input type="email" class="form-control" id="email" data-target="#cv-email" required>
+        <input type="email" class="form-control bg-dark text-white" id="email" data-target="#cv-email" required>
     </div>
 
     <div class="col-md-6">
         <label for="tel" class="form-label">Tel *</label>
-        <input type="text" class="form-control" id="tel" data-target="#cv-tel" required>
+        <input type="text" class="form-control bg-dark text-white" id="tel" data-target="#cv-tel" required>
     </div>
 
     <div class="col-md-6">
         <label for="birth" class="form-label">Date de naissance *</label>
-        <input type="date" class="form-control" id="birth" data-target="#cv-birth" required>
+        <input type="date" class="form-control bg-dark text-white" id="birth" data-target="#cv-birth" required>
     </div>
 
     <div class="col-md-12">
         <label for="avatar" class="form-label">Photo</label>
-        <input type="file" class="form-control" id="avatar" accept="image/*" data-target="#cv-avatar" >
+        <input type="file" class="form-control bg-dark text-white" id="avatar" accept="image/*" data-target="#cv-avatar" >
     </div>
 
     <div class="col-md-12">
         <label for="city" class="form-label">Ville *</label>
-        <input type="text" class="form-control" id="city" data-target="#cv-city" required>
+        <input type="text" class="form-control bg-dark text-white"text-white id="city" data-target="#cv-city" required>
     </div>
 
     <div class="col-12">
         <label for="about" class="form-label">À propos de moi *</label>
-        <textarea class="form-control" id="about" data-target="#cv-about" required></textarea>
+        <textarea class="form-control bg-dark text-white" id="about" data-target="#cv-about" required></textarea>
     </div>
 
 
