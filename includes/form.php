@@ -9,33 +9,33 @@
     <hr class="bg-secondary">
 
     <div class="col-md-6">
-        <label for="name" class="form-label">Nom et Prénom</label>
-        <input type="text" class="form-control" id="name" data-target="#cv-name">
+        <label for="name" class="form-label">Nom et Prénom *</label>
+        <input type="text" class="form-control" id="name" data-target="#cv-name" required>
     </div>
 
     <div class="col-md-6">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" data-target="#cv-email">
+        <label for="email" class="form-label">Email *</label>
+        <input type="email" class="form-control" id="email" data-target="#cv-email" required>
     </div>
 
     <div class="col-md-6">
-        <label for="tel" class="form-label">Tel</label>
-        <input type="text" class="form-control" id="tel" data-target="#cv-tel">
+        <label for="tel" class="form-label">Tel *</label>
+        <input type="text" class="form-control" id="tel" data-target="#cv-tel" required>
     </div>
 
     <div class="col-md-6">
-        <label for="birth" class="form-label">Date de naissance</label>
-        <input type="date" class="form-control" id="birth" data-target="#cv-birth">
+        <label for="birth" class="form-label">Date de naissance *</label>
+        <input type="date" class="form-control" id="birth" data-target="#cv-birth" required>
     </div>
 
     <div class="col-md-12">
-        <label for="city" class="form-label">Ville</label>
-        <input type="text" class="form-control" id="city" data-target="#cv-city">
+        <label for="city" class="form-label">Ville *</label>
+        <input type="text" class="form-control" id="city" data-target="#cv-city" required>
     </div>
 
     <div class="col-12">
-        <label for="about" class="form-label">À propos de moi</label>
-        <textarea class="form-control" id="about" data-target="#cv-about"></textarea>
+        <label for="about" class="form-label">À propos de moi *</label>
+        <textarea class="form-control" id="about" data-target="#cv-about" required></textarea>
     </div>
 
 
@@ -46,7 +46,9 @@
             <h3>Expériences</h3>
         </div>
         <hr>
-        <div id="expForm" class="row"></div>
+        <div id="expForm" class="row">
+            
+        </div>
     </div>
     <button type="button" id="expBtn" class="btn btn-primary btn-lg col-6 m-2 mt-3">Ajouter</button>
 
@@ -81,7 +83,7 @@
 
     <div class="row">
         <div class="d-flex gap-3 pt-5">
-            <img src="/assets/img/lng2.png" class="pb-1">
+            <img src="/assets/img/lng.png" class="pb-1">
             <h3 class="text-center">Langues</h3>
         </div>
         <hr>
@@ -94,7 +96,7 @@
 
 
     <div class="col-12">
-        <button id="exportBtn" type="submit" class="btn btn-primary m-auto mt-5">Valider</button>
+        <button id="exportBtn" type="submit" class="btn btn-success col-12 m-auto mt-5">Télécahrger PDF</button>
     </div>
 
 </form>

@@ -41,66 +41,52 @@ document.addEventListener("DOMContentLoaded", function () {
         if (expId > 6) return;
 
         const expHTML = `
-            <div class="row" id="exp${expId}-form">
-                <div class="col-md-6">
-                    <label for="jobTitle${expId}" class="form-label">Poste</label>
-                    <input type="text" 
-                        class="form-control" 
-                        id="jobTitle${expId}" 
-                        data-target="#cv-jobTitle${expId}">
-                </div>
-
-                <div class="col-md-6">
-                    <label for="company${expId}" class="form-label">Entreprise</label>
-                    <input type="text" 
-                        class="form-control" 
-                        id="company${expId}" 
-                        data-target="#cv-company${expId}">
-                </div>
-
-                <div class="col-md-6 mt-3">
-                    <label for="startDate${expId}" class="form-label">Date de début</label>
-                    <input type="date" 
-                        class="form-control" 
-                        id="startDate${expId}" 
-                        data-target="#cv-startDate${expId}">
-                </div>
-
-                <div class="col-md-6 mt-3">
-                    <label for="endDate${expId}" class="form-label">Date de fin</label>
-                    <input type="date" 
-                        class="form-control" 
-                        id="endDate${expId}" 
-                        data-target="#cv-endDate${expId}">
-                </div>
-
-                <div class="col-md-12 mt-3">
-                    <label for="jobDescription${expId}" class="form-label">Missions</label>
-                    <textarea class="form-control text-start" 
-                            id="jobDescription${expId}" 
-                            data-target="#cv-jobDescription${expId}"></textarea>
-                </div>
-
-                <button type="button" class="btn btn-outline-danger col-md-6 m-auto mt-3 delete-btn" data-id="exp${expId}">Supprimer</button>
-                <hr class="mt-3">
+        <div class="row" id="exp${expId}-form">
+            <div class="col-md-6">
+                <label for="jobTitle${expId}" class="form-label">Poste *</label>
+                <input type="text" class="form-control" id="jobTitle${expId}" data-target="#cv-jobTitle${expId}" required>
             </div>
-        `;
+
+            <div class="col-md-6">
+                <label for="company${expId}" class="form-label">Entreprise *</label>
+                <input type="text" class="form-control" id="company${expId}" data-target="#cv-company${expId}" required>
+            </div>
+
+            <div class="col-md-6 mt-3">
+                <label for="startDate${expId}" class="form-label">Date de début *</label>
+                <input type="date" class="form-control" id="startDate${expId}" data-target="#cv-startDate${expId}" required>
+            </div>
+
+            <div class="col-md-6 mt-3">
+                <label for="endDate${expId}" class="form-label">Date de fin *</label>
+                <input type="date" class="form-control" id="endDate${expId}" data-target="#cv-endDate${expId}" required>
+            </div>
+
+            <div class="col-md-12 mt-3">
+                <label for="jobDescription${expId}" class="form-label">Missions *</label>
+                <textarea class="form-control text-start" id="jobDescription${expId}" data-target="#cv-jobDescription${expId}" required></textarea>
+            </div>
+
+            <button type="button" class="btn btn-outline-danger col-md-6 m-auto mt-3 delete-btn" data-id="exp${expId}">Supprimer</button>
+            <hr class="mt-3">
+        </div>
+    `;
 
         const expCVHTML = `
-            <div id="exp${expId}-cv" class="mb-3">
-                <div class="d-flex">
-                    <h3 id="cv-jobTitle${expId}" class="h6 fw-bold mb-1">---</h3>
-                    <h3 class="h6 fw-bold mb-1">&nbsp;/&nbsp;</h3>
-                    <h3 id="cv-company${expId}" class="h6 fw-bold mb-1">---</h3>
-                </div>
-                <div class="d-flex">
-                    <p id="cv-startDate${expId}" class="text-muted small mb-1">---</p>
-                    <p class="text-muted small mb-1">&nbsp;/&nbsp;</p>
-                    <p id="cv-endDate${expId}" class="text-muted small mb-1">---</p>
-                </div>
-                <p id="cv-jobDescription${expId}">---</p>
+        <div id="exp${expId}-cv" class="mb-3">
+            <div class="d-flex">
+                <h3 id="cv-jobTitle${expId}" class="h6 fw-bold mb-1">---</h3>
+                <h3 class="h6 fw-bold mb-1">&nbsp;/&nbsp;</h3>
+                <h3 id="cv-company${expId}" class="h6 fw-bold mb-1">---</h3>
             </div>
-        `;
+            <div class="d-flex">
+                <p id="cv-startDate${expId}" class="text-muted small mb-1">---</p>
+                <p class="text-muted small mb-1">&nbsp;/&nbsp;</p>
+                <p id="cv-endDate${expId}" class="text-muted small mb-1">---</p>
+            </div>
+            <p id="cv-jobDescription${expId}">---</p>
+        </div>
+    `;
 
         expForm.insertAdjacentHTML("beforeend", expHTML);
         expCv.insertAdjacentHTML("beforeend", expCVHTML);
@@ -122,66 +108,52 @@ document.addEventListener("DOMContentLoaded", function () {
         if (schoolId > 5) return;
 
         const schoolHTML = `
-            <div class="row" id="school${schoolId}-form">
-                <div class="col-md-6">
-                    <label for="diplome${schoolId}" class="form-label">Diplôme</label>
-                    <input type="text" 
-                        class="form-control" 
-                        id="diplome${schoolId}"
-                        data-target="#cv-diplome${schoolId}">
-                </div>
-
-                <div class="col-md-6">
-                    <label for="school${schoolId}" class="form-label">Établissement</label>
-                    <input type="text" 
-                        class="form-control" 
-                        id="school${schoolId}"
-                        data-target="#cv-school${schoolId}">
-                </div>
-
-                <div class="col-md-6 mt-3">
-                    <label for="schoolStartDate${schoolId}" class="form-label">Date de début</label>
-                    <input type="date" 
-                        class="form-control" 
-                        id="schoolStartDate${schoolId}"
-                        data-target="#cv-schoolStartDate${schoolId}">
-                </div>
-
-                <div class="col-md-6 mt-3">
-                    <label for="schoolEndDate${schoolId}" class="form-label">Date de fin</label>
-                    <input type="date" 
-                        class="form-control" 
-                        id="schoolEndDate${schoolId}"
-                        data-target="#cv-schoolEndDate${schoolId}">
-                </div>
-
-                <div class="col-md-12 mt-3">
-                    <label for="schoolDescription${schoolId}" class="form-label">Description</label>
-                    <textarea class="form-control text-start" 
-                        id="schoolDescription${schoolId}"
-                        data-target="#cv-schoolDescription${schoolId}"></textarea>
-                </div>
-                <button type="button" class="btn btn-outline-danger col-md-6 m-auto mt-3 delete-btn" data-id="school${schoolId}">Supprimer</button>
-
-                <hr class="mt-3">
+        <div class="row" id="school${schoolId}-form">
+            <div class="col-md-6">
+                <label for="diplome${schoolId}" class="form-label">Diplôme *</label>
+                <input type="text" class="form-control" id="diplome${schoolId}" data-target="#cv-diplome${schoolId}" required>
             </div>
-        `;
+
+            <div class="col-md-6">
+                <label for="school${schoolId}" class="form-label">Établissement *</label>
+                <input type="text" class="form-control" id="school${schoolId}" data-target="#cv-school${schoolId}" required>
+            </div>
+
+            <div class="col-md-6 mt-3">
+                <label for="schoolStartDate${schoolId}" class="form-label">Date de début *</label>
+                <input type="date" class="form-control" id="schoolStartDate${schoolId}" data-target="#cv-schoolStartDate${schoolId}" required>
+            </div>
+
+            <div class="col-md-6 mt-3">
+                <label for="schoolEndDate${schoolId}" class="form-label">Date de fin *</label>
+                <input type="date" class="form-control" id="schoolEndDate${schoolId}" data-target="#cv-schoolEndDate${schoolId}" required>
+            </div>
+
+            <div class="col-md-12 mt-3">
+                <label for="schoolDescription${schoolId}" class="form-label">Description *</label>
+                <textarea class="form-control text-start" id="schoolDescription${schoolId}" data-target="#cv-schoolDescription${schoolId}" required></textarea>
+            </div>
+
+            <button type="button" class="btn btn-outline-danger col-md-6 m-auto mt-3 delete-btn" data-id="school${schoolId}">Supprimer</button>
+            <hr class="mt-3">
+        </div>
+    `;
 
         const schoolCvHTML = `
-            <div id="school${schoolId}-cv" class="mb-3">
-                <div class="d-flex">
-                    <h3 id="cv-diplome${schoolId}" class="h6 fw-bold mb-1">---</h3>
-                    <h3 class="h6 fw-bold mb-1">&nbsp;/&nbsp;</h3>
-                    <h3 id="cv-school${schoolId}" class="h6 fw-bold mb-1">---</h3>
-                </div>
-                <div class="d-flex">
-                    <p id="cv-schoolStartDate${schoolId}" class="text-muted small mb-1">---</p>
-                    <p class="text-muted small mb-1">&nbsp;/&nbsp;</p>
-                    <p id="cv-schoolEndDate${schoolId}" class="text-muted small mb-1">---</p>
-                </div>
-                <p id="cv-schoolDescription${schoolId}">---</p>
+        <div id="school${schoolId}-cv" class="mb-3">
+            <div class="d-flex">
+                <h3 id="cv-diplome${schoolId}" class="h6 fw-bold mb-1">---</h3>
+                <h3 class="h6 fw-bold mb-1">&nbsp;/&nbsp;</h3>
+                <h3 id="cv-school${schoolId}" class="h6 fw-bold mb-1">---</h3>
             </div>
-        `;
+            <div class="d-flex">
+                <p id="cv-schoolStartDate${schoolId}" class="text-muted small mb-1">---</p>
+                <p class="text-muted small mb-1">&nbsp;/&nbsp;</p>
+                <p id="cv-schoolEndDate${schoolId}" class="text-muted small mb-1">---</p>
+            </div>
+            <p id="cv-schoolDescription${schoolId}">---</p>
+        </div>
+    `;
 
         schoolForm.insertAdjacentHTML("beforeend", schoolHTML);
         schoolCv.insertAdjacentHTML("beforeend", schoolCvHTML);
@@ -190,7 +162,6 @@ document.addEventListener("DOMContentLoaded", function () {
             schoolBtn.style.display = "none";
         }
     });
-
 
 
     //SKILLS
@@ -205,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const skillsHTML = `
         <div id="skills${skillsId}-form" class="col-md-12">
             <label for="skills${skillsId}" class="form-label">Compétence</label>
-            <input class="form-control" id="skills${skillsId}" data-target="#cv-skills${skillsId}">
+            <input class="form-control" id="skills${skillsId}" data-target="#cv-skills${skillsId}" required>
             <button type="button" class="btn btn-outline-danger col-md-6 mt-2 mb-2 delete-btn" data-id="skills${skillsId}">Supprimer</button>
             <hr>
         </div>
@@ -399,28 +370,28 @@ document.addEventListener("DOMContentLoaded", function () {
                     <option value="Zhuang">Zhuang</option>
                     <option value="Zoulou">Zoulou</option>
                 </select> 
+                
+            <label for="lng-lvl${lngId}">Niveau</label>
+            <select class="mt-2 form-select" name="lvl" id="lng-lvl${lngId}" data-target="#cv-lng-lvl${lngId}" required>
+                <option value="">Niveau</option>
+                <option value="A1">A1</option>
+                <option value="A2">A2</option>
+                <option value="B1">B1</option>
+                <option value="B2">B2</option>
+                <option value="C1">C1</option>
+                <option value="C2">C2</option>
+            </select>
 
-                <label for="lng-lvl${lngId}">Niveau</label>
-                <select class="mt-2 form-select" name="lvl" id="lng-lvl${lngId}" data-target="#cv-lng-lvl${lngId}">
-                    <option value="">Niveau</option>
-                    <option value="A1">A1</option>
-                    <option value="A2">A2</option>
-                    <option value="B1">B1</option>
-                    <option value="B2">B2</option>
-                    <option value="C1">C1</option>
-                    <option value="C2">C2</option>
-                </select>
-
-                <button type="button" class="btn btn-outline-danger col-md-6 mt-2 mb-2 d-block delete-btn" data-id="lng${lngId}">Supprimer</button>
-                <hr>
-            </div>
-        `;
+            <button type="button" class="btn btn-outline-danger col-md-6 mt-2 mb-2 d-block delete-btn" data-id="lng${lngId}">Supprimer</button>
+            <hr>
+        </div>
+    `;
 
         const lngCvHTML = `
-            <li id="lng${lngId}-cv">
-                <span id="cv-lng${lngId}">---</span> - <span id="cv-lng-lvl${lngId}">---</span>
-            </li>
-        `;
+        <li id="lng${lngId}-cv">
+            <span id="cv-lng${lngId}">---</span> - <span id="cv-lng-lvl${lngId}">---</span>
+        </li>
+    `;
 
         lngForm.insertAdjacentHTML("beforeend", lngHTML);
         lngCv.insertAdjacentHTML("beforeend", lngCvHTML);
@@ -428,8 +399,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
     //EXPORT
-    document.getElementById("exportBtn").addEventListener("click", function () {
+    document.getElementById("exportBtn").addEventListener("click", function (e) {
+        e.preventDefault();
         window.location.href = "export.php";
     });
 });
