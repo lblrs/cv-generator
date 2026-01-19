@@ -43,28 +43,28 @@ document.addEventListener("DOMContentLoaded", function () {
         const expHTML = `
         <div class="row" id="exp${expId}-form">
             <div class="col-md-6">
-                <label for="jobTitle${expId}" class="form-label">Poste *</label>
-                <input type="text" class="form-control" id="jobTitle${expId}" data-target="#cv-jobTitle${expId}" required>
+                <label for="jobTitle${expId}" class="form-label">Poste </label>
+                <input type="text" class="form-control" id="jobTitle${expId}" data-target="#cv-jobTitle${expId}" >
             </div>
 
             <div class="col-md-6">
-                <label for="company${expId}" class="form-label">Entreprise *</label>
-                <input type="text" class="form-control" id="company${expId}" data-target="#cv-company${expId}" required>
+                <label for="company${expId}" class="form-label">Entreprise </label>
+                <input type="text" class="form-control" id="company${expId}" data-target="#cv-company${expId}" >
             </div>
 
             <div class="col-md-6 mt-3">
-                <label for="startDate${expId}" class="form-label">Date de début *</label>
-                <input type="date" class="form-control" id="startDate${expId}" data-target="#cv-startDate${expId}" required>
+                <label for="startDate${expId}" class="form-label">Date de début </label>
+                <input type="date" class="form-control" id="startDate${expId}" data-target="#cv-startDate${expId}" >
             </div>
 
             <div class="col-md-6 mt-3">
-                <label for="endDate${expId}" class="form-label">Date de fin *</label>
-                <input type="date" class="form-control" id="endDate${expId}" data-target="#cv-endDate${expId}" required>
+                <label for="endDate${expId}" class="form-label">Date de fin </label>
+                <input type="date" class="form-control" id="endDate${expId}" data-target="#cv-endDate${expId}" >
             </div>
 
             <div class="col-md-12 mt-3">
-                <label for="jobDescription${expId}" class="form-label">Missions *</label>
-                <textarea class="form-control text-start" id="jobDescription${expId}" data-target="#cv-jobDescription${expId}" required></textarea>
+                <label for="jobDescription${expId}" class="form-label">Missions </label>
+                <textarea class="form-control text-start" id="jobDescription${expId}" data-target="#cv-jobDescription${expId}" ></textarea>
             </div>
 
             <button type="button" class="btn btn-outline-danger col-md-6 m-auto mt-3 delete-btn" data-id="exp${expId}">Supprimer</button>
@@ -110,28 +110,28 @@ document.addEventListener("DOMContentLoaded", function () {
         const schoolHTML = `
         <div class="row" id="school${schoolId}-form">
             <div class="col-md-6">
-                <label for="diplome${schoolId}" class="form-label">Diplôme *</label>
-                <input type="text" class="form-control" id="diplome${schoolId}" data-target="#cv-diplome${schoolId}" required>
+                <label for="diplome${schoolId}" class="form-label">Diplôme </label>
+                <input type="text" class="form-control" id="diplome${schoolId}" data-target="#cv-diplome${schoolId}" >
             </div>
 
             <div class="col-md-6">
-                <label for="school${schoolId}" class="form-label">Établissement *</label>
-                <input type="text" class="form-control" id="school${schoolId}" data-target="#cv-school${schoolId}" required>
+                <label for="school${schoolId}" class="form-label">Établissement </label>
+                <input type="text" class="form-control" id="school${schoolId}" data-target="#cv-school${schoolId}" >
             </div>
 
             <div class="col-md-6 mt-3">
-                <label for="schoolStartDate${schoolId}" class="form-label">Date de début *</label>
-                <input type="date" class="form-control" id="schoolStartDate${schoolId}" data-target="#cv-schoolStartDate${schoolId}" required>
+                <label for="schoolStartDate${schoolId}" class="form-label">Date de début </label>
+                <input type="date" class="form-control" id="schoolStartDate${schoolId}" data-target="#cv-schoolStartDate${schoolId}" >
             </div>
 
             <div class="col-md-6 mt-3">
-                <label for="schoolEndDate${schoolId}" class="form-label">Date de fin *</label>
-                <input type="date" class="form-control" id="schoolEndDate${schoolId}" data-target="#cv-schoolEndDate${schoolId}" required>
+                <label for="schoolEndDate${schoolId}" class="form-label">Date de fin </label>
+                <input type="date" class="form-control" id="schoolEndDate${schoolId}" data-target="#cv-schoolEndDate${schoolId}" >
             </div>
 
             <div class="col-md-12 mt-3">
-                <label for="schoolDescription${schoolId}" class="form-label">Description *</label>
-                <textarea class="form-control text-start" id="schoolDescription${schoolId}" data-target="#cv-schoolDescription${schoolId}" required></textarea>
+                <label for="schoolDescription${schoolId}" class="form-label">Description </label>
+                <textarea class="form-control text-start" id="schoolDescription${schoolId}" data-target="#cv-schoolDescription${schoolId}" ></textarea>
             </div>
 
             <button type="button" class="btn btn-outline-danger col-md-6 m-auto mt-3 delete-btn" data-id="school${schoolId}">Supprimer</button>
@@ -176,13 +176,25 @@ document.addEventListener("DOMContentLoaded", function () {
         const skillsHTML = `
         <div id="skills${skillsId}-form" class="col-md-12">
             <label for="skills${skillsId}" class="form-label">Compétence</label>
-            <input class="form-control" id="skills${skillsId}" data-target="#cv-skills${skillsId}" required>
+            <input class="form-control" id="skills${skillsId}" data-target="#cv-skills${skillsId}" >
+            
+            <label for="skills-lvl${skillsId}" class="mt-3">Niveau</label>
+            <select class="mt-2 form-select" name="lvl" id="skills-lvl${skillsId}" data-target="#cv-skills-lvl${skillsId}" >
+            <option value="Niveau"></option>
+            <option value="Novice">Novice</option>
+            <option value="Intermédiaire">Intermédiaire</option>
+            <option value="Avancé">Avancé</option>
+            <option value="Expert">Expert</option>
+            </select>
+            
             <button type="button" class="btn btn-outline-danger col-md-6 mt-2 mb-2 delete-btn" data-id="skills${skillsId}">Supprimer</button>
             <hr>
         </div>
     `;
 
-        const skillsCvHTML = `<li id="skills${skillsId}-cv">---</li>`;
+        const skillsCvHTML =
+            `<span id="cv-skills${skillsId}">---</span> - <span id="cv-skills-lvl${skillsId}">---</span>`
+            ;
 
         skillsForm.insertAdjacentHTML("beforeend", skillsHTML);
         skillsCv.insertAdjacentHTML("beforeend", skillsCvHTML);
@@ -370,10 +382,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     <option value="Zhuang">Zhuang</option>
                     <option value="Zoulou">Zoulou</option>
                 </select> 
-                
-            <label for="lng-lvl${lngId}">Niveau</label>
-            <select class="mt-2 form-select" name="lvl" id="lng-lvl${lngId}" data-target="#cv-lng-lvl${lngId}" required>
-                <option value="">Niveau</option>
+
+            <label for="lng-lvl${lngId}" class="mt-3">Niveau</label>
+            <select class="mt-2 form-select" name="lvl" id="lng-lvl${lngId}" data-target="#cv-lng-lvl${lngId}" >
+                <option value=""></option>
                 <option value="A1">A1</option>
                 <option value="A2">A2</option>
                 <option value="B1">B1</option>
@@ -403,6 +415,25 @@ document.addEventListener("DOMContentLoaded", function () {
     //EXPORT
     document.getElementById("exportBtn").addEventListener("click", function (e) {
         e.preventDefault();
+/*
+        const form = document.querySelector('form');
+        if (!form.checkValidity()) {
+            alert('Veuillez remplir tous les champs obligatoires');
+            return;
+        }
+*/
         window.location.href = "export.php";
     });
+
+
+
+
+    //RESET BTN
+    resetBtn = document.getElementById("resetBtn");
+
+    resetBtn.addEventListener("click", function () {
+        window.location.reload();
+    });
+
+
 });

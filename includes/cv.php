@@ -1,12 +1,13 @@
 <div class="p-2 rounded-4 overflow-y-auto h-100">
-    <div class="container mt-4">
+    <div class="container text-center">
 
         <table width="100%" cellspacing="0" cellpadding="0" style="page-break-inside: avoid;">
             <tr>
 
                 <!-- ABOUT -->
-                <td width="75%" valign="top">
-                    <div style="text-align: center; margin-bottom: 10px;">
+                <td width="75%" style="text-align: center;">
+                    <img id="cv-avatar" class="" src="/assets/img/avatar.jpg" alt="Profile photo" style="width: 5rem; height: 5rem; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 0.5rem auto;">
+                    <div class="text-center">
                         <h1 id="cv-name" style="margin: 0; font-weight: bold;">Prénom&nbsp;Nom</h1>
                     </div>
 
@@ -17,7 +18,7 @@
                 </td>
 
                 <!-- CONTACT -->
-                <td width="25%" valign="top">
+                <td width="25%" valign="" class="mt-5">
                     <div class="contact-item">
                         <span id="cv-email">Email</span>
                     </div>
@@ -43,15 +44,16 @@
 
     <table width="100%" cellspacing="0" cellpadding="0">
         <tr>
-            <td width="70%" valign="top">
+            <td width="60%" valign="top">
 
                 <!-- EXP -->
                 <div id="expCv" class="mb-5">
-                    <h2 class="border-bottom border-primary pb-1 mt-3">
+                    <h2 class="pb-1 mt-3">
                         Expérience professionnelle
                     </h2>
+                    <hr class="text-primary">
 
-                    
+                    <ul id="expCv"></ul>
                 </div>
                 <hr>
 
@@ -63,7 +65,7 @@
                 </div>
 
             </td>
-            <td width="30%" valign="top" style="padding-left: 20px;">
+            <td width="30%" valign="top" style="padding-left: 5rem;">
 
                 <!-- SKILLS -->
                 <h5 class="border-bottom border-primary pb-1 mt-4">Compétences</h5>

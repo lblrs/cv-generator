@@ -2,7 +2,7 @@
 
     <!-- Info personel -->
     <div class="d-flex gap-3">
-        <img src="/assets/img/person.png">
+        <img src="/assets/img/person.png" alt="icon informations personnels">
         <h3> Informations</h3>
     </div>
 
@@ -29,6 +29,11 @@
     </div>
 
     <div class="col-md-12">
+        <label for="avatar" class="form-label">Photo</label>
+        <input type="file" class="form-control" id="avatar" accept="image/*" data-target="#cv-avatar" >
+    </div>
+
+    <div class="col-md-12">
         <label for="city" class="form-label">Ville *</label>
         <input type="text" class="form-control" id="city" data-target="#cv-city" required>
     </div>
@@ -42,7 +47,7 @@
     <!-- EXP -->
     <div class="row">
         <div class="d-flex gap-3 pt-5">
-            <img src="/assets/img/exp.png">
+            <img src="/assets/img/exp.png" alt="icone expériences">
             <h3>Expériences</h3>
         </div>
         <hr>
@@ -56,7 +61,7 @@
     <!-- EDUCATION -->
     <div class="row">
         <div class="d-flex gap-3 pt-5">
-            <img src="/assets/img/shool.png">
+            <img src="/assets/img/shool.png" alt="icone éducation">
             <h3 class="text-center">Éducation</h3>
         </div>
         <hr>
@@ -69,7 +74,7 @@
 
     <div class="row">
         <div class="d-flex gap-3 pt-5">
-            <img src="/assets/img/skills.png">
+            <img src="/assets/img/skills.png" alt="icone compétences">
             <h3 class="text-center">Compétences</h3>
         </div>
         <hr>
@@ -83,7 +88,7 @@
 
     <div class="row">
         <div class="d-flex gap-3 pt-5">
-            <img src="/assets/img/lng.png" class="pb-1">
+            <img src="/assets/img/lng.png" class="pb-1" alt="icone langues">
             <h3 class="text-center">Langues</h3>
         </div>
         <hr>
@@ -94,9 +99,10 @@
     <button type="button" id="lngBtn" class="btn btn-primary btn-lg col-6 m-2 mt-3">Ajouter</button>
 
 
-
-    <div class="col-12">
-        <button id="exportBtn" type="submit" class="btn btn-success col-12 m-auto mt-5">Télécahrger PDF</button>
+        
+        <div class="col-12">
+        <button id="resetBtn" type="submit" class="btn btn-warning mt-5 ">Reset</button>
+        <button id="exportBtn" type="submit" class="btn btn-success col-12 m-auto mt-2">Télécahrger PDF</button>
     </div>
 
 </form>
