@@ -20,6 +20,10 @@
         </div>
     </section>
 
+
+
+
+    
     <section id="cvSection" class="vh-100 p-4" style="background-image: url(/assets/img/bg2.webp); background-repeat:no-repeat; background-size: cover">
         <main class="row h-100 d-flex justify-content-center gap-5 p-5 m-auto">
 
@@ -34,7 +38,8 @@
         </main>
     </section>
 
-    <script src="test.js"></script>
+    <script src="/assets/js/test.js"></script>
+    <script src="/assets/js/btn.js"></script>
     <script src="/assets/js/cv.js"></script>
 </body>
 

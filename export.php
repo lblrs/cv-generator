@@ -1,16 +1,10 @@
 <?php
-require_once 'vendor/autoload.php';
-
+require 'vendor/autoload.php';
 use Dompdf\Dompdf;
 
-ob_start();
-include 'includes/cv.php';
-$html = ob_get_clean();
-
-$pdf = new Dompdf();
-$pdf->loadHtml($html);
-$pdf->setPaper('A4');
-$pdf->render();
-$pdf->stream('cv.pdf');
-
+$dompdf = new Dompdf();
+$dompdf->loadHtml($_POST['html']);
+$dompdf->render();
+header('Content-Type: application/pdf');
+echo $dompdf->output();
 ?>

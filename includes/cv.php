@@ -1,4 +1,4 @@
-<div class="p-2 rounded-4 overflow-y-auto h-100">
+<div id="cv" class="p-2 rounded-4 overflow-y-auto h-100">
     <div class="container text-center">
 
         <table width="100%" cellspacing="0" cellpadding="0" style="page-break-inside: avoid;">

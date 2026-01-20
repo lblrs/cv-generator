@@ -13,22 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
         };
     });
 
-    //DELETE BTN
-    document.addEventListener("click", function (e) {
-        if (e.target.classList.contains("delete-btn")) {
-            const id = e.target.getAttribute("data-id");
-
-            const formElement = document.getElementById(id + "-form");
-            const cvElement = document.getElementById(id + "-cv");
-
-            if (formElement) formElement.remove();
-            if (cvElement) cvElement.remove();
-        }
-    });
-
-
-
-
 
     //EXP
     const expForm = document.getElementById("expForm");
@@ -193,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
         const skillsCvHTML =
-        `<li id="skills${skillsId}-cv">
+            `<li id="skills${skillsId}-cv">
         <span id="cv-skills${skillsId}">---</span> - <span id="cv-skills-lvl${skillsId}">---</span>
         </li>`;
 
@@ -413,28 +397,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    //EXPORT
-    document.getElementById("exportBtn").addEventListener("click", function (e) {
-        e.preventDefault();
-/*
-        const form = document.querySelector('form');
-        if (!form.checkValidity()) {
-            alert('Veuillez remplir tous les champs obligatoires');
-            return;
-        }
-*/
-        window.location.href = "export.php";
-    });
 
 
 
 
-    //RESET BTN
-    resetBtn = document.getElementById("resetBtn");
 
-    resetBtn.addEventListener("click", function () {
-        window.location.reload();
-    });
+
 
 
 });
