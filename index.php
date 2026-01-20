@@ -41,6 +41,7 @@
     <script src="/assets/js/cv.js"></script>
     <script src="/assets/js/btn.js"></script>
     <script src="/assets/js/export.js"></script>
+    <script src="/assets/js/home.js"></script>
 </body>
 
 </html>
