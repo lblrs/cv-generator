@@ -31,16 +31,16 @@
                 <?php include "includes/form.php" ?>
             </div>
     
-            <div class="col-12 col-md-6 col-xl-5 order-2 bg-light rounded-5 overflow-y-auto h-100 p-2">
-                <?php include "includes/cv.php" ?>
+            <div id="cv" class="col-12 col-md-6 col-xl-5 order-2 bg-light rounded-5 overflow-y-auto h-100 p-2">
+                <?php include "includes/cv2.php" ?>
             </div>
 
         </main>
     </section>
 
-    <script src="/assets/js/test.js"></script>
-    <script src="/assets/js/btn.js"></script>
     <script src="/assets/js/cv.js"></script>
+    <script src="/assets/js/btn.js"></script>
+    <script src="/assets/js/export.js"></script>
 </body>
 
 </html>

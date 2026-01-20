@@ -57,20 +57,15 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
         const expCVHTML = `
-        <div id="exp${expId}-cv" class="mb-3">
-            <div class="d-flex">
-                <h3 id="cv-jobTitle${expId}" class="h6 fw-bold mb-1">---</h3>
-                <h3 class="h6 fw-bold mb-1">&nbsp;/&nbsp;</h3>
-                <h3 id="cv-company${expId}" class="h6 fw-bold mb-1">---</h3>
-            </div>
-            <div class="d-flex">
-                <p id="cv-startDate${expId}" class="text-muted small mb-1">---</p>
-                <p class="text-muted small mb-1">&nbsp;/&nbsp;</p>
-                <p id="cv-endDate${expId}" class="text-muted small mb-1">---</p>
-            </div>
+        <div id="exp${expId}-cv">
+            <p>
+                <span style="font-size: x-large; font-weight: bold;" id="cv-jobTitle${expId}">---</span> / <span style="font-size: x-large; font-weight: bold;" id="cv-company${expId}">---</span>
+                -
+                <span id="cv-startDate${expId}">---</span> / <span id="cv-endDate${expId}">---</span>
+            </p>
             <p id="cv-jobDescription${expId}">---</p>
         </div>
-    `;
+        `;
 
         expForm.insertAdjacentHTML("beforeend", expHTML);
         expCv.insertAdjacentHTML("beforeend", expCVHTML);
@@ -124,20 +119,15 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
         const schoolCvHTML = `
-        <div id="school${schoolId}-cv" class="mb-3">
-            <div class="d-flex">
-                <h3 id="cv-diplome${schoolId}" class="h6 fw-bold mb-1">---</h3>
-                <h3 class="h6 fw-bold mb-1">&nbsp;/&nbsp;</h3>
-                <h3 id="cv-school${schoolId}" class="h6 fw-bold mb-1">---</h3>
+            <div id="school${schoolId}-cv">
+                <p>
+                    <span style="font-size: x-large; font-weight: bold;" id="cv-diplome${schoolId}">---</span> / <span style="font-size: x-large; font-weight: bold;" id="cv-school${schoolId}">---</span>
+                    -
+                    <span id="cv-schoolStartDate${schoolId}">---</span> / <span id="cv-schoolEndDate${schoolId}">---</span>
+                </p>
+                <p id="cv-schoolDescription${schoolId}">---</p>
             </div>
-            <div class="d-flex">
-                <p id="cv-schoolStartDate${schoolId}" class="text-muted small mb-1">---</p>
-                <p class="text-muted small mb-1">&nbsp;/&nbsp;</p>
-                <p id="cv-schoolEndDate${schoolId}" class="text-muted small mb-1">---</p>
-            </div>
-            <p id="cv-schoolDescription${schoolId}">---</p>
-        </div>
-    `;
+            `;
 
         schoolForm.insertAdjacentHTML("beforeend", schoolHTML);
         schoolCv.insertAdjacentHTML("beforeend", schoolCvHTML);
@@ -176,10 +166,11 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     `;
 
-        const skillsCvHTML =
-            `<li id="skills${skillsId}-cv">
-        <span id="cv-skills${skillsId}">---</span> - <span id="cv-skills-lvl${skillsId}">---</span>
-        </li>`;
+        const skillsCvHTML =`
+        <div>
+            <span id="cv-skills${skillsId}">---</span> - <span id="cv-skills-lvl${skillsId}">---</span>
+        </div>
+            `;
 
         skillsForm.insertAdjacentHTML("beforeend", skillsHTML);
         skillsCv.insertAdjacentHTML("beforeend", skillsCvHTML);
@@ -385,10 +376,10 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
         const lngCvHTML = `
-        <li id="lng${lngId}-cv">
+        <div>
             <span id="cv-lng${lngId}">---</span> - <span id="cv-lng-lvl${lngId}">---</span>
-        </li>
-    `;
+        </div>
+            `;
 
         lngForm.insertAdjacentHTML("beforeend", lngHTML);
         lngCv.insertAdjacentHTML("beforeend", lngCvHTML);
