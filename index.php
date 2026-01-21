@@ -10,28 +10,32 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body style="background-image: url(/assets/img/bg1.webp); background-repeat:no-repeat; background-size: cover; background-attachment: fixed;">
+<header>
+    <?php include "includes/nav.php" ?>
+</header>
 
-    <section class="vh-100 d-flex align-items-center justify-content-center" >
+<body style="background-image: url(/assets/img/bg1.webp); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;">
+
+    <!-- SECTION 1 -->
+    <section class="min-vh-100 d-flex align-items-center justify-content-center py-5">
         <div class="text-center">
             <h1 class="text-white display-4 fw-bold mb-4">Bienvenue au CV Maker</h1>
             <p class="text-white-50 lead mb-4">Créez votre CV professionnel en quelques minutes</p>
-            <button class="btn btn-light btn-lg" onclick="document.getElementById('cvSection').scrollIntoView({behavior: `smooth`})">Commencer</button>
+            <button class="btn btn-light btn-lg" onclick="document.getElementById('cvSection').scrollIntoView({behavior: 'smooth'})">Commencer</button>
         </div>
     </section>
 
 
 
-
-    
-    <section id="cvSection" class="vh-100 p-4" >
+    <!-- CV SECTION -->
+    <section id="cvSection" class="vh-100 p-4">
         <main class="row h-100 d-flex justify-content-center gap-5 p-5 m-auto">
 
-            <div class="col-12 col-md-5 col-xl-3 order-1 bg-dark text-white rounded-5 p-5 h-100 overflow-y-auto">
+            <div class="col-12 col-lg-5 col-xl-3 order-1 bg-dark text-white rounded-5 p-5 h-100 overflow-y-auto">
                 <?php include "includes/form.php" ?>
             </div>
-    
-            <div id="cv" class="col-12 col-md-6 col-xl-5 order-2 bg-light rounded-5 overflow-y-auto h-100 p-2">
+
+            <div id="cv" class="col-12 col-lg-6 col-xl-5 order-2 bg-light rounded-5 overflow-y-auto h-100 p-2">
                 <?php include "includes/cv2.php" ?>
             </div>
 
@@ -41,7 +45,8 @@
     <script src="/assets/js/cv.js"></script>
     <script src="/assets/js/btn.js"></script>
     <script src="/assets/js/export.js"></script>
-    <script src="/assets/js/home.js"></script>
+
+
 </body>
 
 </html>
