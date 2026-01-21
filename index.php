@@ -10,9 +10,9 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body >
+<body style="background-image: url(/assets/img/bg1.webp); background-repeat:no-repeat; background-size: cover; background-attachment: fixed;">
 
-    <section class="vh-100 d-flex align-items-center justify-content-center" style="background-image: url(/assets/img/bg1.webp); background-repeat:no-repeat; background-size: cover">
+    <section class="vh-100 d-flex align-items-center justify-content-center" >
         <div class="text-center">
             <h1 class="text-white display-4 fw-bold mb-4">Bienvenue au CV Maker</h1>
             <p class="text-white-50 lead mb-4">Créez votre CV professionnel en quelques minutes</p>
@@ -24,7 +24,7 @@
 
 
     
-    <section id="cvSection" class="vh-100 p-4" style="background-image: url(/assets/img/bg2.webp); background-repeat:no-repeat; background-size: cover">
+    <section id="cvSection" class="vh-100 p-4" >
         <main class="row h-100 d-flex justify-content-center gap-5 p-5 m-auto">
 
             <div class="col-12 col-md-5 col-xl-3 order-1 bg-dark text-white rounded-5 p-5 h-100 overflow-y-auto">

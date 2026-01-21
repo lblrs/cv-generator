@@ -20,7 +20,7 @@
 
     <div class="col-md-6">
         <label for="tel" class="form-label">Tel *</label>
-        <input type="text" class="form-control bg-dark text-white" id="tel" data-target="#cv-tel" required>
+        <input type="text" maxlength="10" class="form-control bg-dark text-white" id="tel" data-target="#cv-tel" required>
     </div>
 
     <div class="col-md-6">
@@ -35,7 +35,7 @@
 
     <div class="col-md-12">
         <label for="city" class="form-label">Ville *</label>
-        <input type="text" class="form-control bg-dark text-white"text-white id="city" data-target="#cv-city" required>
+        <input type="text" maxlength="20" class="form-control bg-dark text-white"text-white id="city" data-target="#cv-city" required>
     </div>
 
     <div class="col-12">

@@ -10,8 +10,31 @@ document.addEventListener("DOMContentLoaded", function () {
             if (targetElement) {
                 targetElement.textContent = e.target.value.trim() || "---";
             };
+
+
         };
     });
+
+
+    //PHOTO
+    const avatarInput = document.getElementById("avatar");
+
+    avatarInput.addEventListener("change", (e) => {
+        if (e.target.files && e.target.files[0]) {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                const base64 = event.target.result; // C'est du base64
+                document.getElementById("avatarCv").src = base64;
+                avatarCV = base64; // Sauvegardez pour le PDF
+            };
+
+            reader.readAsDataURL(file);
+        }
+    });
+
+
 
 
     //EXP
@@ -166,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     `;
 
-        const skillsCvHTML =`
+        const skillsCvHTML = `
         <div>
             <span id="cv-skills${skillsId}">---</span> - <span id="cv-skills-lvl${skillsId}">---</span>
         </div>
@@ -384,15 +407,6 @@ document.addEventListener("DOMContentLoaded", function () {
         lngForm.insertAdjacentHTML("beforeend", lngHTML);
         lngCv.insertAdjacentHTML("beforeend", lngCvHTML);
     });
-
-
-
-
-
-
-
-
-
 
 
 
