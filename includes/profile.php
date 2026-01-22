@@ -17,13 +17,19 @@
 
 
 <body style="background-image: url(/assets/img/bg2.webp); background-repeat:no-repeat; background-size: cover; background-attachment: fixed;">
-    <div class="d-flex justify-content-center align-items-center vh-100">
+    <main class="d-flex justify-content-center align-items-center vh-100">
+        <section  style="width: 70%; height: 70%; background-color:rgba(131, 131, 131, 0.8);" class="rounded-4">
 
-        <div style="width: 70%; height: 70%; background-color:rgba(131, 131, 131, 0.8);" class="rounded-4">
-            <h1 class="text-black text-center m-5">Vous n'avez pas encore de CV enregistré</h1>
-        </div>
+            <!--  <h1 class="text-black text-center m-5">Vous n'avez pas encore de CV enregistré</h1> -->
+            <div id="myCv" class="row h-100 d-flex justify-content-center gap-5 p-5 m-auto">
 
-    </div>
+                <div  class="col-12 col-lg-5 col-xl-3 order-1 bg-dark text-white rounded-5 p-5 h-100 overflow-y-auto">
+                </div>
+
+            </div>
+
+        </section>
+    </main>
 </body>
 
 

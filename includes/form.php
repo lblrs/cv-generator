@@ -1,13 +1,19 @@
 <form class="row g-3 p-2 rounded-4 overflow-y-auto h-100">
 
     <!-- Info personel -->
+    
     <div class="d-flex gap-3">
         <img src="/assets/img/person.png" alt="icon informations personnels">
         <h3> Informations</h3>
     </div>
-
+    
     <hr>
-
+    
+    <select id="selectCv" class="my-2 bg-dark text-light text-center form-control">
+        <option value="0"> Choisir le cv</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select>
     <div class="col-md-6">
         <label for="name" class="form-label">Nom et Prénom *</label>
         <input type="text" class="form-control bg-dark text-white" id="name" data-target="#cv-name" required>
@@ -30,12 +36,12 @@
 
     <div class="col-md-12">
         <label for="avatar" class="form-label">Photo</label>
-        <input type="file" class="form-control bg-dark text-white" id="avatar" accept="image/*" data-target="#cv-avatar" >
+        <input type="file" class="form-control bg-dark text-white" id="avatar" accept="image/*" data-target="#cv-avatar">
     </div>
 
     <div class="col-md-12">
         <label for="city" class="form-label">Ville *</label>
-        <input type="text" maxlength="20" class="form-control bg-dark text-white"text-white id="city" data-target="#cv-city" required>
+        <input type="text" maxlength="20" class="form-control bg-dark text-white" text-white id="city" data-target="#cv-city" required>
     </div>
 
     <div class="col-12">
@@ -52,7 +58,7 @@
         </div>
         <hr>
         <div id="expForm" class="row">
-            
+
         </div>
     </div>
     <button type="button" id="expBtn" class="btn btn-primary btn-lg col-6 m-2 mt-3">Ajouter</button>
@@ -99,10 +105,10 @@
     <button type="button" id="lngBtn" class="btn btn-primary btn-lg col-6 m-2 mt-3">Ajouter</button>
 
 
-        
-        <div class="col-12 mt-5">
-            <button id="exportBtn" type="submit" class="btn btn-success col-md-8">Télécahrger PDF</button>
-            <button id="resetBtn" type="submit" class="btn btn-outline-success">Reset</button>
+
+    <div class="col-12 mt-5">
+        <button id="exportBtn" type="submit" class="btn btn-success col-md-8">Télécahrger PDF</button>
+        <button id="resetBtn" type="submit" class="btn btn-outline-success">Reset</button>
     </div>
 
 </form>

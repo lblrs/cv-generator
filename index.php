@@ -25,8 +25,6 @@
         </div>
     </section>
 
-
-
     <!-- CV SECTION -->
     <section id="cvSection" class="vh-100 p-4">
         <main class="row h-100 d-flex justify-content-center gap-5 p-5 m-auto">
@@ -35,14 +33,15 @@
                 <?php include "includes/form.php" ?>
             </div>
 
-            <div id="cv" class="col-12 col-lg-6 col-xl-5 order-2 bg-light rounded-5 overflow-y-auto h-100 p-2">
-                <?php include "includes/cv2.php" ?>
+            <div id="myCv" class="col-12 col-lg-6 col-xl-5 order-2 bg-light rounded-5 overflow-y-auto h-100 p-2">
+                <h1 class="text-dark text-center m-5 border-bottom border-3 border-danger"> Choisissez votre CV </h1>
             </div>
 
         </main>
     </section>
 
     <script src="/assets/js/cv.js"></script>
+    <script src="/assets/js/selectCv.js"></script>
     <script src="/assets/js/btn.js"></script>
     <script src="/assets/js/export.js"></script>
 

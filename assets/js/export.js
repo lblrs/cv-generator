@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("exportBtn").addEventListener("click", function (e) {
 
+        e.preventDefault();
+
         const formName = document.getElementById("name").value.trim();
         const formEmail = document.getElementById("email").value.trim();
         const formTel = document.getElementById("tel").value.trim();
@@ -14,6 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Veuillez renseigner tous les champs");
             return;
         };
+
+
+        //SAUVEGARDE DE CV
+
 
 
         //EXPORT
@@ -33,11 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 a.click();
             });
 
-
-        e.preventDefault();
-
-
     });
-
-
+    
 });

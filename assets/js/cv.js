@@ -35,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-
-
     //EXP
     const expForm = document.getElementById("expForm");
     const expCv = document.getElementById("expCv");
