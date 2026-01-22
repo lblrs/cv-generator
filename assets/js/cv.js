@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
             const reader = new FileReader();
 
             reader.onload = function (event) {
-                const base64 = event.target.result; // C'est du base64
+                const base64 = event.target.result;
                 document.getElementById("avatarCv").src = base64;
-                avatarCV = base64; // Sauvegardez pour le PDF
+                avatarCV = base64;
             };
 
             reader.readAsDataURL(file);
@@ -80,8 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const expCVHTML = `
         <div id="exp${expId}-cv">
             <p>
-                <span style="font-size: x-large; font-weight: bold;" id="cv-jobTitle${expId}">---</span> / <span style="font-size: x-large; font-weight: bold;" id="cv-company${expId}">---</span>
-                -
+                <span style="font-size: large; font-weight: bold;" id="cv-jobTitle${expId}">---</span> / <span style="font-size: large; font-weight: bold;" id="cv-company${expId}">---</span>
+            </p>
+            <p style="font-size: small; color: #666;">
                 <span id="cv-startDate${expId}">---</span> / <span id="cv-endDate${expId}">---</span>
             </p>
             <p id="cv-jobDescription${expId}">---</p>
@@ -142,8 +143,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const schoolCvHTML = `
             <div id="school${schoolId}-cv">
                 <p>
-                    <span style="font-size: x-large; font-weight: bold;" id="cv-diplome${schoolId}">---</span> / <span style="font-size: x-large; font-weight: bold;" id="cv-school${schoolId}">---</span>
-                    -
+                    <span style="font-size: large; font-weight: bold;" id="cv-diplome${schoolId}">---</span> / <span style="font-size: large; font-weight: bold;" id="cv-school${schoolId}">---</span>
+                </p>
+                <p style="font-size: small; color: #666;">
                     <span id="cv-schoolStartDate${schoolId}">---</span> / <span id="cv-schoolEndDate${schoolId}">---</span>
                 </p>
                 <p id="cv-schoolDescription${schoolId}">---</p>
@@ -405,7 +407,5 @@ document.addEventListener("DOMContentLoaded", function () {
         lngForm.insertAdjacentHTML("beforeend", lngHTML);
         lngCv.insertAdjacentHTML("beforeend", lngCvHTML);
     });
-
-
 
 });

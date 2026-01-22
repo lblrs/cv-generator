@@ -33,7 +33,7 @@
                 <?php include "includes/form.php" ?>
             </div>
 
-            <div id="myCv" class="col-12 col-lg-6 col-xl-5 order-2 bg-light rounded-5 overflow-y-auto h-100 p-2">
+            <div id="cv" class="col-12 col-lg-6 col-xl-5 order-2 bg-light rounded-5 overflow-y-auto h-100 p-2">
                 <h1 class="text-dark text-center m-5 border-bottom border-3 border-danger"> Choisissez votre CV </h1>
             </div>
 

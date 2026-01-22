@@ -11,8 +11,9 @@
     
     <select id="selectCv" class="my-2 bg-dark text-light text-center form-control">
         <option value="0"> Choisir le cv</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
+        <option value="1">CV-1</option>
+        <option value="2">CV-2</option>
+        <option value="3">CV-3</option>
     </select>
     <div class="col-md-6">
         <label for="name" class="form-label">Nom et Prénom *</label>
