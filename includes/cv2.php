@@ -11,38 +11,62 @@
 
     <table width="100%" style="height: 100vh;">
         <tr>
-            <!-- LEFT 30% -->
+
+            <!-- ABOUT -->
             <td width="30%" valign="top" style="padding: 20px; background: #f5f5f5;">
                 <img id="avatarCv" style="width: 7rem; height: 7rem; border-radius: 50%;">
                 <h1 id="cv-name">Nom Prenom</h1>
-                <p id="cv-about">Lorem ipsum...</p>
+                <p id="cv-about">---</p>
 
-                <h4>Contact</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li id="cv-email"></li>
-                    <li id="cv-tel"></li>
-                    <li id="cv-birth"></li>
-                    <li id="cv-city"></li>
-                </ul>
+                <!-- CONTACT -->
+                <div class="contact-item">
+                    <span id="cv-email"></span>
+                </div>
 
-                <h2>Compétences</h2>
+                <div class="contact-item">
+                    <span id="cv-tel"></span>
+                </div>
+
+                <div class="contact-item">
+                    <span id="cv-birth"></span>
+                </div>
+
+                <div class="contact-item">
+                    <span id="cv-city"></span>
+                </div>
+
+                <!-- SKILLS -->
+                <h5>Compétences</h5>
                 <div id="skillsCv"></div>
 
-                <h2>Langues</h2>
+
+                <!-- LNG -->
+                <h5>Langues</h5>
                 <div id="cv-lng"></div>
-                
+
+
+
             </td>
 
-            <!-- RIGHT 70% -->
+
             <td width="70%" valign="top" style="padding: 20px;">
 
 
+                <!-- EXP -->
+                <div id="expCv" class="mb-5">
+                    <h2 class="pb-1 mt-3">Expérience professionnelle</h2>
+                    <hr>
+                    <ul id="expCv"></ul>
+                </div>
 
-                <h2>Expériences</h2>
-                <div id="expCv"></div>
 
-                <h2>Éducation</h2>
-                <div id="schoolCv"></div>
+                <!-- SCHOOL -->
+                <div>
+                    <h2 class="pb-1 mt-4">Éducation</h2>
+                    <hr>
+                    <div id="schoolCv" class="mb-3">
+                    </div>
+                </div>
 
 
             </td>

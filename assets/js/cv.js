@@ -1,5 +1,140 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    let expId = 0;
+    let schoolId = 0;
+    let skillsId = 0;
+    let lngId = 0;
+
+    //CV SELECT
+    const selectCv = document.getElementById("selectCv");
+    const insertCv = document.getElementById("cv");
+
+    selectCv.addEventListener("change", function () {
+
+        const cv0 = `<h1 class="text-dark text-center"> Choisissez un CV </h1>`
+
+        //CV 1
+        const cv1 = `<html lang="fr">
+        <div class="h-100 w-100 p-3">
+            <table width="100%">
+                <tr>
+                    <td width="65%" valign="top">
+                        <h1 id="cv-name">Nom Prenom</h1>
+                        <p id="cv-about">Lorem ipsum dolor</p>
+                    </td>
+                    <td width="30%" style="padding-left: 5rem;">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <ul style="list-style: none;">
+                                        <img id="avatarCv" style="width: 7rem; height: 7rem; border-radius: 50%;">
+                                        <li style="padding-top: 1rem;" id="cv-email"></li>
+                                        <li style="padding-top: 0.5rem;" id="cv-tel"></li>
+                                        <li style="padding-top: 0.5rem;" id="cv-birth"></li>
+                                        <li style="padding-top: 0.5rem;" id="cv-city"></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <table width="75%">
+                <tr>
+                    <td valign="top">
+                        <h2>Expériences</h2>
+                        <div id="expCv"></div>
+                        <hr>
+                        <h2>Éducation</h2>
+                        <div id="schoolCv"></div>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <table width="100%">
+                <tr>
+                    <td width="50%" valign="top">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <h4>Competences</h4>
+                                    <div id="skillsCv" style="list-style: none;"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="50%">
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <h4>Langues</h4>
+                                    <div id="cv-lng" style="list-style: none;"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </html>`
+
+        //CV 2
+        const cv2 = `
+        <html lang="fr">
+        <head>
+        <meta charset="UTF-8">
+        </head>
+        <table width="100%" style="height: 100vh;">
+            <tr>
+                <td width="30%" valign="top" style="padding: 20px; background: #f5f5f5;">
+                    <img id="avatarCv" style="width: 7rem; height: 7rem; border-radius: 50%;">
+                    <h1 id="cv-name">Nom Prenom</h1>
+                    <p id="cv-about">---</p>
+                    <div class="m-1">
+                        <span id="cv-email"></span>
+                    </div>
+                    <div class="m-1">
+                        <span id="cv-tel"></span>
+                    </div>
+                    <div class="m-1">
+                        <span id="cv-birth"></span>
+                    </div>
+                    <div class="m-1">
+                        <span id="cv-city"></span>
+                    </div>
+                    <h5>Compétences</h5>
+                    <div id="skillsCv"></div>
+                    <h5>Langues</h5>
+                    <div id="cv-lng"></div>
+                </td>
+
+                
+                <td width="70%" valign="top" style="padding: 20px;">
+                    <div id="expCv" class="mb-5">
+                        <h2 class="pb-1 mt-3">Expérience professionnelle</h2>
+                        <hr>
+                    </div>
+                    <div>
+                        <h2 class="pb-1 mt-4">Éducation</h2>
+                        <hr>
+                        <div id="schoolCv" class="mb-3"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        </html>`
+        
+
+        if (this.value === "0") {
+            insertCv.innerHTML = cv0;
+        } else if (this.value === "1") {
+            insertCv.innerHTML = cv1;
+        } else if (this.value === "2") {
+            insertCv.innerHTML = cv2;
+        }
+    });
+
     //INPUT
     document.addEventListener("input", function (e) {
         const targetSelector = e.target.getAttribute("data-target");
@@ -9,12 +144,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (targetElement) {
                 targetElement.textContent = e.target.value.trim() || "---";
-            };
-
-
-        };
+            }
+        }
     });
-
 
     //PHOTO
     const avatarInput = document.getElementById("avatar");
@@ -26,22 +158,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
             reader.onload = function (event) {
                 const base64 = event.target.result;
-                document.getElementById("avatarCv").src = base64;
-                avatarCV = base64;
+                const avatarCv = document.getElementById("avatarCv");
+                if (avatarCv) {
+                    avatarCv.src = base64;
+                }
             };
 
             reader.readAsDataURL(file);
         }
     });
 
-
     //EXP
-    const expForm = document.getElementById("expForm");
-    const expCv = document.getElementById("expCv");
     const expBtn = document.getElementById("expBtn");
-    let expId = 0;
 
     expBtn.addEventListener("click", function () {
+        const expForm = document.getElementById("expForm");
+        const expCv = document.getElementById("expCv");
         expId++;
         if (expId > 6) return;
 
@@ -72,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <textarea class="form-control text-start" id="jobDescription${expId}" data-target="#cv-jobDescription${expId}" ></textarea>
             </div>
 
-            <button type="button" class="btn btn-outline-danger col-md-6 m-auto mt-3 delete-btn" data-id="exp${expId}">Supprimer</button>
+            <button type="button" class="btn btn-outline-danger col-md-6 m-auto mt-3 delete-btn" data-id="exp${expId},">Supprimer</button>
             <hr class="mt-3">
         </div>
     `;
@@ -97,14 +229,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-
     //SCHOOL
-    const schoolForm = document.getElementById("schoolForm");
-    const schoolCv = document.getElementById("schoolCv");
     const schoolBtn = document.getElementById("schoolBtn");
-    let schoolId = 0;
 
     schoolBtn.addEventListener("click", function () {
+        const schoolForm = document.getElementById("schoolForm");
+        const schoolCv = document.getElementById("schoolCv");
         schoolId++;
         if (schoolId > 5) return;
 
@@ -160,14 +290,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-
     //SKILLS
-    const skillsForm = document.getElementById("skillsForm");
-    const skillsCv = document.getElementById("skillsCv");
     const skillsBtn = document.getElementById("skillsBtn");
-    let skillsId = 0;
 
     skillsBtn.addEventListener("click", function () {
+        const skillsForm = document.getElementById("skillsForm");
+        const skillsCv = document.getElementById("skillsCv");
         skillsId++;
 
         const skillsHTML = `
@@ -184,29 +312,26 @@ document.addEventListener("DOMContentLoaded", function () {
             <option value="Expert">Expert</option>
             </select>
             
-            <button type="button" class="btn btn-outline-danger col-md-6 mt-2 mb-2 d-block delete-btn" data-id="skills${skillsId}">Supprimer</button>
-            <hr>
+        <button type="button" class="btn btn-outline-danger col-md-6 mt-2 mb-2 d-block delete-btn" data-id="skills${skillsId}">Supprimer</button>
+        <hr>
         </div>
     `;
 
         const skillsCvHTML = `
-        <div>
-            <span id="cv-skills${skillsId}">---</span> - <span id="cv-skills-lvl${skillsId}">---</span>
-        </div>
-            `;
+        <div id="skills${skillsId}-cv" style="margin-bottom: 5px;">
+    <span id="cv-skills${skillsId}">---</span> - <span id="cv-skills-lvl${skillsId}">---</span>
+</div>`;
 
         skillsForm.insertAdjacentHTML("beforeend", skillsHTML);
         skillsCv.insertAdjacentHTML("beforeend", skillsCvHTML);
     });
 
-
     //LNG
-    const lngForm = document.getElementById("lngForm");
-    const lngCv = document.getElementById("cv-lng");
     const lngBtn = document.getElementById("lngBtn");
-    let lngId = 0;
 
     lngBtn.addEventListener("click", function () {
+        const lngForm = document.getElementById("lngForm");
+        const lngCv = document.getElementById("cv-lng");
         lngId++;
 
         const lngHTML = `
@@ -214,172 +339,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 <label for="lng${lngId}" class="form-label">Langue</label>
                 <select id="lng${lngId}" name="languages" class="form-select" data-target="#cv-lng${lngId}">
                     <option value="">Sélectionner une langue</option>
-                    <option value="Afrikaans">Afrikaans</option>
-                    <option value="Albanais">Albanais</option>
-                    <option value="Amharique">Amharique</option>
-                    <option value="Arabe">Arabe</option>
-                    <option value="Aragonais">Aragonais</option>
-                    <option value="Arménien">Arménien</option>
-                    <option value="Asturien">Asturien</option>
-                    <option value="Aymara">Aymara</option>
-                    <option value="Azéri">Azéri</option>
-                    <option value="Basque">Basque</option>
-                    <option value="Biélorusse">Biélorusse</option>
-                    <option value="Bengali">Bengali</option>
-                    <option value="Bodo">Bodo</option>
-                    <option value="Bosniaque">Bosniaque</option>
-                    <option value="Breton">Breton</option>
-                    <option value="Bulgare">Bulgare</option>
-                    <option value="Catalan">Catalan</option>
-                    <option value="Kurde central">Kurde central</option>
-                    <option value="Tchétchène">Tchétchène</option>
-                    <option value="Chinois">Chinois</option>
-                    <option value="Chinois (Hong Kong)">Chinois (Hong Kong)</option>
-                    <option value="Chinois simplifié">Chinois simplifié</option>
-                    <option value="Chinois traditionnel">Chinois traditionnel</option>
-                    <option value="Corse">Corse</option>
-                    <option value="Croate">Croate</option>
-                    <option value="Tchèque">Tchèque</option>
-                    <option value="Danois">Danois</option>
-                    <option value="Maldivien">Maldivien</option>
-                    <option value="Néerlandais">Néerlandais</option>
-                    <option value="Dzongkha">Dzongkha</option>
-                    <option value="Anglais">Anglais</option>
-                    <option value="Anglais (Australie)">Anglais (Australie)</option>
-                    <option value="Anglais (Canada)">Anglais (Canada)</option>
-                    <option value="Anglais (Inde)">Anglais (Inde)</option>
-                    <option value="Anglais (Nouvelle-Zélande)">Anglais (Nouvelle-Zélande)</option>
-                    <option value="Anglais (Afrique du Sud)">Anglais (Afrique du Sud)</option>
-                    <option value="Anglais (Royaume-Uni)">Anglais (Royaume-Uni)</option>
-                    <option value="Anglais (États-Unis)">Anglais (États-Unis)</option>
-                    <option value="Espéranto">Espéranto</option>
-                    <option value="Estonien">Estonien</option>
-                    <option value="Éwé">Éwé</option>
-                    <option value="Féroïen">Féroïen</option>
-                    <option value="Filipino">Filipino</option>
-                    <option value="Finnois">Finnois</option>
                     <option value="Français">Français</option>
-                    <option value="Français (Canada)">Français (Canada)</option>
-                    <option value="Français (France)">Français (France)</option>
-                    <option value="Français (Suisse)">Français (Suisse)</option>
-                    <option value="Galicien">Galicien</option>
-                    <option value="Géorgien">Géorgien</option>
-                    <option value="Allemand">Allemand</option>
-                    <option value="Allemand (Autriche)">Allemand (Autriche)</option>
-                    <option value="Allemand (Allemagne)">Allemand (Allemagne)</option>
-                    <option value="Allemand (Liechtenstein)">Allemand (Liechtenstein)</option>
-                    <option value="Allemand (Suisse)">Allemand (Suisse)</option>
-                    <option value="Grec">Grec</option>
-                    <option value="Guarani">Guarani</option>
-                    <option value="Gujarati">Gujarati</option>
-                    <option value="Haoussa">Haoussa</option>
-                    <option value="Hawaïen">Hawaïen</option>
-                    <option value="Hébreu">Hébreu</option>
-                    <option value="Hindi">Hindi</option>
-                    <option value="Hongrois">Hongrois</option>
-                    <option value="Islandais">Islandais</option>
-                    <option value="Indonésien">Indonésien</option>
-                    <option value="Interlingua">Interlingua</option>
-                    <option value="Inuktitut">Inuktitut</option>
-                    <option value="Irlandais">Irlandais</option>
-                    <option value="Italien">Italien</option>
-                    <option value="Italien (Italie)">Italien (Italie)</option>
-                    <option value="Italien (Suisse)">Italien (Suisse)</option>
-                    <option value="Japonais">Japonais</option>
-                    <option value="Groenlandais">Groenlandais</option>
-                    <option value="Kannada">Kannada</option>
-                    <option value="Cachemiri">Cachemiri</option>
-                    <option value="Kazakh">Kazakh</option>
-                    <option value="Khmer">Khmer</option>
-                    <option value="Kinyarwanda">Kinyarwanda</option>
-                    <option value="Coréen">Coréen</option>
-                    <option value="Kurde">Kurde</option>
-                    <option value="Kirghiz">Kirghiz</option>
-                    <option value="Lao">Lao</option>
-                    <option value="Latin">Latin</option>
-                    <option value="Letton">Letton</option>
-                    <option value="Lingala">Lingala</option>
-                    <option value="Lituanien">Lituanien</option>
-                    <option value="Ganda">Ganda</option>
-                    <option value="Luxembourgeois">Luxembourgeois</option>
-                    <option value="Macédonien">Macédonien</option>
-                    <option value="Maithili">Maithili</option>
-                    <option value="Malais">Malais</option>
-                    <option value="Malayalam">Malayalam</option>
-                    <option value="Maltais">Maltais</option>
-                    <option value="Manipuri">Manipuri</option>
-                    <option value="Marathi">Marathi</option>
-                    <option value="Mongol">Mongol</option>
-                    <option value="Népalais">Népalais</option>
-                    <option value="Sotho du Nord">Sotho du Nord</option>
-                    <option value="Norvégien">Norvégien</option>
-                    <option value="Norvégien (Bokmål)">Norvégien (Bokmål)</option>
-                    <option value="Norvégien (Nynorsk)">Norvégien (Nynorsk)</option>
-                    <option value="Occitan">Occitan</option>
-                    <option value="Oriya">Oriya</option>
-                    <option value="Oromo">Oromo</option>
-                    <option value="Ossète">Ossète</option>
-                    <option value="Pachto">Pachto</option>
-                    <option value="Persan">Persan</option>
-                    <option value="Polonais">Polonais</option>
-                    <option value="Portugais">Portugais</option>
-                    <option value="Portugais (Brésil)">Portugais (Brésil)</option>
-                    <option value="Portugais (Portugal)">Portugais (Portugal)</option>
-                    <option value="Pendjabi">Pendjabi</option>
-                    <option value="Quechua">Quechua</option>
-                    <option value="Roumain">Roumain</option>
-                    <option value="Roumain (Moldavie)">Roumain (Moldavie)</option>
-                    <option value="Romanche">Romanche</option>
-                    <option value="Russe">Russe</option>
-                    <option value="Samoan">Samoan</option>
-                    <option value="Santali">Santali</option>
-                    <option value="Sarde">Sarde</option>
-                    <option value="Gaélique écossais">Gaélique écossais</option>
-                    <option value="Serbe">Serbe</option>
-                    <option value="Serbo-croate">Serbo-croate</option>
-                    <option value="Shona">Shona</option>
-                    <option value="Sindhi">Sindhi</option>
-                    <option value="Cingalais">Cingalais</option>
-                    <option value="Slovaque">Slovaque</option>
-                    <option value="Slovène">Slovène</option>
-                    <option value="Somali">Somali</option>
-                    <option value="Sotho du Sud">Sotho du Sud</option>
+                    <option value="Anglais">Anglais</option>
                     <option value="Espagnol">Espagnol</option>
-                    <option value="Espagnol (Argentine)">Espagnol (Argentine)</option>
-                    <option value="Espagnol (Amérique latine)">Espagnol (Amérique latine)</option>
-                    <option value="Espagnol (Mexique)">Espagnol (Mexique)</option>
-                    <option value="Espagnol (Espagne)">Espagnol (Espagne)</option>
-                    <option value="Espagnol (États-Unis)">Espagnol (États-Unis)</option>
-                    <option value="Soundanais">Soundanais</option>
-                    <option value="Swahili">Swahili</option>
-                    <option value="Suédois">Suédois</option>
-                    <option value="Tadjik">Tadjik</option>
-                    <option value="Tamoul">Tamoul</option>
-                    <option value="Tatar">Tatar</option>
-                    <option value="Télougou">Télougou</option>
-                    <option value="Thaï">Thaï</option>
-                    <option value="Tigrigna">Tigrigna</option>
-                    <option value="Tongien">Tongien</option>
-                    <option value="Tswana">Tswana</option>
-                    <option value="Turc">Turc</option>
-                    <option value="Turkmène">Turkmène</option>
-                    <option value="Twi">Twi</option>
-                    <option value="Oudmourte">Oudmourte</option>
-                    <option value="Ukrainien">Ukrainien</option>
-                    <option value="Ourdou">Ourdou</option>
-                    <option value="Ouïghour">Ouïghour</option>
-                    <option value="Ouzbek">Ouzbek</option>
-                    <option value="Venda">Venda</option>
-                    <option value="Vietnamien">Vietnamien</option>
-                    <option value="Wallon">Wallon</option>
-                    <option value="Gallois">Gallois</option>
-                    <option value="Frison occidental">Frison occidental</option>
-                    <option value="Wolof">Wolof</option>
-                    <option value="Xhosa">Xhosa</option>
-                    <option value="Yiddish">Yiddish</option>
-                    <option value="Yoruba">Yoruba</option>
-                    <option value="Zhuang">Zhuang</option>
-                    <option value="Zoulou">Zoulou</option>
+                    <option value="Allemand">Allemand</option>
+                    <option value="Italien">Italien</option>
                 </select> 
 
             <label for="lng-lvl${lngId}" class="mt-3">Niveau</label>
@@ -399,10 +363,9 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
         const lngCvHTML = `
-        <div>
-            <span id="cv-lng${lngId}">---</span> - <span id="cv-lng-lvl${lngId}">---</span>
-        </div>
-            `;
+            <div id="lng${lngId}-cv" style="margin-bottom: 5px;">
+                <span id="cv-lng${lngId}">---</span> - <span id="cv-lng-lvl${lngId}">---</span>
+            </div>`;
 
         lngForm.insertAdjacentHTML("beforeend", lngHTML);
         lngCv.insertAdjacentHTML("beforeend", lngCvHTML);

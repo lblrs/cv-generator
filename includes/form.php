@@ -1,20 +1,20 @@
 <form class="row g-3 p-2 rounded-4 overflow-y-auto h-100">
 
     <!-- Info personel -->
-    
+
     <div class="d-flex gap-3">
         <img src="/assets/img/person.png" alt="icon informations personnels">
         <h3> Informations</h3>
     </div>
-    
+
     <hr>
-    
+
     <select id="selectCv" class="my-2 bg-dark text-light text-center form-control">
         <option value="0"> Choisir le cv</option>
         <option value="1">CV-1</option>
         <option value="2">CV-2</option>
-        <option value="3">CV-3</option>
     </select>
+
     <div class="col-md-6">
         <label for="name" class="form-label">Nom et Prénom *</label>
         <input type="text" class="form-control bg-dark text-white" id="name" data-target="#cv-name" required>
