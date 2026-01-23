@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //EXPORT
         const html = document.getElementById('cv').innerHTML;
 
-        fetch('export.php', {
+        fetch('/export.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: 'html=' + encodeURIComponent(html)
