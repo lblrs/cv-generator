@@ -39,7 +39,10 @@ La mise en page du site et le style du CV ont été réalisés principalement av
 
 ## Templates de CV
 
+**CV-1**
 ![CV 1](assets/img/cv-1.png)
+
+**CV-2**
 ![CV 2](assets/img/cv-2.png)
 
 
