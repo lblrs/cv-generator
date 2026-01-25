@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         //CV 1
         const cv1 = `<html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <title>CV1</title>
+        </head>
         <div class="h-100 w-100 p-3">
             <table width="100%">
                 <tr>
@@ -83,7 +87,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const cv2 = `
         <html lang="fr">
         <head>
-        <meta charset="UTF-8">
+            <meta charset="UTF-8">
+            <title>CV2</title>
         </head>
         <table width="100%" style="height: 100vh;">
             <tr>
