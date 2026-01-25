@@ -133,10 +133,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (this.value === "0") {
             insertCv.innerHTML = cv0;
+
         } else if (this.value === "1") {
             insertCv.innerHTML = cv1;
+
         } else if (this.value === "2") {
             insertCv.innerHTML = cv2;
+
         }
     });
 
@@ -295,6 +298,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+
+
     //SKILLS
     const skillsBtn = document.getElementById("skillsBtn");
 
@@ -331,6 +336,9 @@ document.addEventListener("DOMContentLoaded", function () {
         skillsCv.insertAdjacentHTML("beforeend", skillsCvHTML);
     });
 
+  
+  
+  
     //LNG
     const lngBtn = document.getElementById("lngBtn");
 

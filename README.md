@@ -35,3 +35,10 @@ La mise en page du site et le style du CV ont été réalisés principalement av
 ![CV 1](assets/img/cv-1.png)
 ![CV 2](assets/img/cv-2.png)
 
+
+
+## Liens
+
+**GitHub** https://github.com/lblrs/cv-generator
+
+**GitHub Pages** https://lblrs.github.io/cv-generator/
