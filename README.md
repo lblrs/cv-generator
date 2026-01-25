@@ -22,8 +22,15 @@ Le CV téléchargé correspond exactement au CV prévisualisé et prend correcte
 
 La mise en page du site et le style du CV ont été réalisés principalement avec **Bootstrap**, à l’exception de quelques cas spécifiques comme le background.
 
+---
 
+## Liens
 
+**GitHub** https://github.com/lblrs/cv-generator
+
+**GitHub Pages** https://lblrs.github.io/cv-generator/
+
+---
 
 ## Aperçu du projet
 
@@ -37,8 +44,3 @@ La mise en page du site et le style du CV ont été réalisés principalement av
 
 
 
-## Liens
-
-**GitHub** https://github.com/lblrs/cv-generator
-
-**GitHub Pages** https://lblrs.github.io/cv-generator/
